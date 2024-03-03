@@ -29,3 +29,9 @@ jobs:
       - name: echo the color
         id: step_two
         run: echo $my_color
+  my_color_3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo the color
+        id: step_one
+        run: echo $my_color
