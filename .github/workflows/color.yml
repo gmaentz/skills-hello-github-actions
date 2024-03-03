@@ -47,3 +47,4 @@ jobs:
         run: |
           cat ${{github.env}}
           echo ${{env.favorite_color}}
+          echo ${{env.my_color}}
