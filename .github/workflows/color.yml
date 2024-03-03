@@ -15,11 +15,13 @@ jobs:
         run: |
           cat ${{github.env}}
           echo "my_color=$favorite_color" >> "$GITHUB_ENV"
+          echo $my_color
+          echo $favorite_color
       - name: echo the color
         id: step_two
         run: |
           echo $my_color
-          cat ${{github.env}}
+          echo $favorite_color
   my_color_2:
     runs-on: ubuntu-latest
     env:
