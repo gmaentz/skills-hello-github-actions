@@ -13,13 +13,13 @@ jobs:
         env:
           favorite_color: green
         run: |
-          echo ${{github.env}}
+          cat ${{github.env}}
           echo "my_color=$favorite_color" >> "$GITHUB_ENV"
       - name: echo the color
         id: step_two
         run: |
           echo $my_color
-          echo ${{github.env}}
+          cat ${{github.env}}
   my_color_2:
     runs-on: ubuntu-latest
     env:
@@ -31,12 +31,12 @@ jobs:
           favorite_color: orange
         run: |
           echo "my_color=$favorite_color" >> "$GITHUB_ENV"
-          echo ${{github.env}}
+          cat ${{github.env}}
       - name: echo the color
         id: step_two
         run: |
           echo $my_color
-          echo ${{github.env}}
+          cat ${{github.env}}
   my_color_3:
     runs-on: ubuntu-latest
     env:
@@ -45,5 +45,5 @@ jobs:
       - name: echo the color
         id: step_one
         run: |
-          echo ${{github.env}}
+          cat ${{github.env}}
           echo ${{env.favorite_color}}
