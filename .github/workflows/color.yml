@@ -18,8 +18,6 @@ jobs:
       - name: echo the color
         id: step_two
         run: |
-          echo $my_color
-          echo $favorite_color
           echo "🎉 My color is ${{ env.my_color }}"
           echo "🎉 My favorite color is ${{ env.favorite_color }}"
   my_color_2:
@@ -28,6 +26,5 @@ jobs:
       - name: echo the color
         id: step_one
         run: |
-          cat ${{github.env}}
-          echo ${{env.favorite_color}}
-          echo ${{env.my_color}}
+          echo "🎉 My color is ${{ env.my_color }}"
+          echo "🎉 My favorite color is ${{ env.favorite_color }}"
