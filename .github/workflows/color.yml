@@ -20,7 +20,8 @@ jobs:
         run: |
           echo $my_color
           echo $favorite_color
-          # echo "The set colors are:" $my_color and $favorite_color"
+          echo "🎉 My color is ${{ env.my_color }}"
+          echo "🎉 My favorite color is ${{ env.favorite_color }}"
   my_color_2:
     runs-on: ubuntu-latest
     steps:
